@@ -12,9 +12,10 @@
 </head>
 
 <body>
-<?php
+    <?php
     include("headerPlusNav.php");
     ?>
+    
     <section class="main">
         <table width="80%" cellpadding="5" class="table-main">
             <tr>
@@ -99,93 +100,23 @@
                         <dd>400 ₽</dd>
                     </dl>
                 </td>
-
             <tr>
-                <td class="card">
-                    <img src="img/book5.jpg" alt="#" width="100px" class="card-img">
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Название</span>
-                        </dt>
-                        <dd>Метро 2033</dd>
-                    </dl>
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Автор</span>
-                        </dt>
-                        <dd>Выборнов Н. Э.</dd>
-                    </dl>
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Цена</span>
-                        </dt>
-                        <dd>400 ₽</dd>
-                    </dl>
-                </td>
-                <td class="card">
-                    <img src="img/book6.jpg" alt="#" width="100px" class="card-img">
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Название</span>
-                        </dt>
-                        <dd>Метро 2033</dd>
-                    </dl>
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Автор</span>
-                        </dt>
-                        <dd>Выборнов Н. Э.</dd>
-                    </dl>
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Цена</span>
-                        </dt>
-                        <dd>400 ₽</dd>
-                    </dl>
-                </td>
-                <td class="card">
-                    <img src="img/book7.jpg" alt="#" width="100px" class="card-img">
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Название</span>
-                        </dt>
-                        <dd>Метро 2033</dd>
-                    </dl>
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Автор</span>
-                        </dt>
-                        <dd>Выборнов Н. Э.</dd>
-                    </dl>
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Цена</span>
-                        </dt>
-                        <dd>400 ₽</dd>
-                    </dl>
-                </td>
-                <td class="card">
-                    <img src="img/book8.jpg" alt="#" width="100px" class="card-img">
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Название</span>
-                        </dt>
-                        <dd>Метро 2033</dd>
-                    </dl>
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Автор</span>
-                        </dt>
-                        <dd>Выборнов Н. Э.</dd>
-                    </dl>
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Цена</span>
-                        </dt>
-                        <dd>400 ₽</dd>
-                    </dl>
-                </td>
-            </tr>
+             
+
+             <?php
+        $singles = get_records_all_studybooks();
+        $i = 1 ;
+        foreach ($singles as $single){
+            if($i % 3 == 1 || $i % 3 ==0 ){
+                <tr>
+            }
+            ?>
+            
+             <?php}?>
+            
+
+            
+
 
         </table>
     </section>

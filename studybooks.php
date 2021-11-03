@@ -12,37 +12,48 @@
 </head>
 
 <body>
-    
+
     <?php
     include("headerPlusNav.php");
     ?>
 
     <section class="main__books">
-    <div class="cart__wrapper">
-            <img src="img/book1.jpg" alt="#" width="100px" class="card-img">
-            <button class="button__wraper">
-                Купить!
-            </button>
-            <dl class="dl-inline">
-                <dt class="dt-dotted">
-                    <span>Название</span>
-                </dt>
-                <dd>Метро 2033</dd> 
-                <dt class="dt-dotted">
-                    <span>Автор</span>
-                </dt>
-                <dd>Выборнов Н. Э.</dd> 
-                
-                <dt class="dt-dotted">
-                    <span>Цена</span>
-                </dt>
-                <dd>400 ₽</dd> 
-            </dl>
+        <div class="flex_for_cards">
+
+    <?php
+        $singles = get_records_all_studybooks();
+        
+        foreach ($singles as $single): ?>
+
+            <div class="cart__wrapper">
+                <img src="<?php echo $single["img"] ?>" alt="#" width="100px" class="card-img">
+                <button class="button__wraper">
+                    Купить!
+                </button>
+                <dl class="dl-inline">
+                    <dt class="dt-dotted">
+                        <span>Название</span>
+                    </dt>
+                    <dd><?php echo $single["title"] ?></dd> 
+                    <dt class="dt-dotted">
+                        <span>Автор</span>
+                    </dt>
+                    <dd><?php echo $single["author"] ?></dd> 
+                    
+                    <dt class="dt-dotted">
+                        <span>Цена</span>
+                    </dt>
+                    <dd><?php echo $single["price"] ?> ₽</dd> 
+                </dl>
         </div>
+
+            <?php endforeach; ?>
+
+            </div>
     </section>
 
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
     <script src="js/script.js"></script>
 
 

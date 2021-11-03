@@ -252,27 +252,34 @@ dt {
   margin-top: 16vh;
   margin-right: 1vw;
   display: flex;
-  min-width: 80%;
+  /* margin: 0 auto; */
+  justify-content: center;
+  
+
+}
+.flex_for_cards{
+  display: flex;
+  /* width: 80%; */
   border-radius: 6px;
   padding: 2vh;
   box-sizing: border-box;
   flex-wrap: wrap;
-  justify-content: space-around;
-
+  /* margin: 0 auto; */
+  /* justify-content: center; */
 }
 
 .cart__wrapper {
+  flex-basis: 30%;
   margin-top: 2vh;
   min-width: 20%;
   border-radius: 6px;
   min-height: 25vh;
   padding: 0.25vh 1%;
-  flex-basis: 25%;
   position: relative;
 }
 
 .cart__wrapper dl {
-  margin-left: 4vw;
+  margin-left: 1vw;
 }
 
 .button__wraper {

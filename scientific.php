@@ -16,6 +16,7 @@
     include("headerPlusNav.php");
     ?>
     <section class="main__books">
+        
 
        <div class="cart__wrapper">
             <img src="img/book1.jpg" alt="#" width="100px" class="card-img">
@@ -38,6 +39,7 @@
                 <dd>400 ₽</dd> 
             </dl>
         </div>
+        
         
     </section>
 
