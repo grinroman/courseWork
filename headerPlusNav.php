@@ -7,7 +7,7 @@
             <nav class="main-header-nav">
                 <a href="fantastic.php">Фантастика</a>
                 <a href="studybooks.php">Учебники </a>
-                <a href="#">Научная литература </a>
+                <a href="scientific.php">Научная литература</a>
             </nav>
         </div>
         <!-- /.container -->
@@ -16,9 +16,9 @@
         <div class="menu">
             <a href="#" class="menu-btn"></a>
             <nav class="menu-list">
-                <a href="index.php">Главная</a>
-                <a href="author.php">Об авторе</a>
-                <a href="firm.php">О фирме</a>
+                <div class="menu-list-item"><a href="index.php">Главная</a></div>
+                <div class="menu-list-item"><a href="author.php">Об авторе</a></div>
+                <div class="menu-list-item"><a href="firm.php">О фирме</a></div>
             </nav>
         </div>
     </div>

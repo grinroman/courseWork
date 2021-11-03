@@ -12,13 +12,12 @@
 </head>
 
 <body>
-    
-    <?php
+<?php
     include("headerPlusNav.php");
     ?>
-
     <section class="main__books">
-    <div class="cart__wrapper">
+
+       <div class="cart__wrapper">
             <img src="img/book1.jpg" alt="#" width="100px" class="card-img">
             <button class="button__wraper">
                 Купить!
@@ -39,10 +38,11 @@
                 <dd>400 ₽</dd> 
             </dl>
         </div>
+        
     </section>
 
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+    
     <script src="js/script.js"></script>
 
 
