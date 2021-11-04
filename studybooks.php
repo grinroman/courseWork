@@ -21,7 +21,7 @@
         <div class="flex_for_cards">
 
     <?php
-        $singles = get_records_all_studybooks();
+        $singles = get_records_all(1);
         
         foreach ($singles as $single): ?>
 

@@ -18,101 +18,47 @@
     
     <section class="main">
         <table width="80%" cellpadding="5" class="table-main">
-            <tr>
-                <td class="card">
-                    <img src="img/book1.jpg" alt="#" width="100px" class="card-img">
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Название</span>
-                        </dt>
-                        <dd>Метро 2033</dd> 
-                        <dt class="dt-dotted">
-                            <span>Автор</span>
-                        </dt>
-                        <dd>Выборнов Н. Э.</dd> 
-                        
-                        <dt class="dt-dotted">
-                            <span>Цена</span>
-                        </dt>
-                        <dd>400 ₽</dd> 
-                    </dl>
-                </td>
-                <td class="card">
-                    <img src="img/book2.jpg" alt="#" width="100px" class="card-img">
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Название</span>
-                        </dt>
-                        Метро 2033
-                    </dl>
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Автор</span>
-                        </dt>
-                        Выборнов Н. Э.
-                    </dl>
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Цена</span>
-                        </dt>
-                        400 ₽
-                    </dl>
-                </td>
-                <td class="card">
-                    <img src="img/book3.jpg" alt="#" width="100px" class="card-img">
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Название</span>
-                        </dt>
-                        <dd>Метро 2033</dd>
-                    </dl>
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Автор</span>
-                        </dt>
-                        <dd>Выборнов Н. Э.</dd>
-                    </dl>
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Цена</span>
-                        </dt>
-                        <dd>400 ₽</dd>
-                    </dl>
-                </td>
-                <td class="card">
-                    <img src="img/book4.jpg" alt="#" width="100px" class="card-img">
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Название</span>
-                        </dt>
-                        <dd>Метро 2033</dd>
-                    </dl>
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Автор</span>
-                        </dt>
-                        <dd>Выборнов Н. Э.</dd>
-                    </dl>
-                    <dl class="dl-inline">
-                        <dt class="dt-dotted">
-                            <span>Цена</span>
-                        </dt>
-                        <dd>400 ₽</dd>
-                    </dl>
-                </td>
-            <tr>
-             
-
-             <?php
-        $singles = get_records_all_studybooks();
+        <?php
+        $singles = get_records_all(3);
         $i = 1 ;
         foreach ($singles as $single){
-            if($i % 3 == 1 || $i % 3 ==0 ){
-                <tr>
-            }
-            ?>
+            if($i % 3 == 1 )
+            echo "<tr>";
+        ?>
             
-             <?php}?>
+            <td class="card">
+                    <img src="<?php echo $single["img"] ?>" alt="#" width="150px" class="card-img">
+                    <button class="button__wraper">
+                    Купить!
+                    </button>
+                    <div class="book__description">
+                        <dl class="dl-inline">
+                            <dt class="dt-dotted">
+                                <span>Название</span>
+                            </dt>
+                            <dd><?php echo $single["title"] ?></dd>
+                        </dl>
+                        <dl class="dl-inline">
+                            <dt class="dt-dotted">
+                                <span>Автор</span>
+                            </dt>
+                            <dd><?php echo $single["author"] ?></dd>
+                        </dl>
+                        <dl class="dl-inline">
+                            <dt class="dt-dotted">
+                                <span>Цена</span>
+                            </dt>
+                            <dd><?php echo $single["price"] ?> ₽</dd>
+                        </dl>
+                    </div>
+            </td>
+
+            <?php
+            if($i % 3 == 0 )
+            echo "<tr>";
+
+            $i = $i + 1;
+        }?>
             
 
             

@@ -299,3 +299,7 @@ dt {
   border: solid 2px #ee7f17;
   color: #000;
 }
+
+.book__description{
+  margin:0 1.5vw;
+}

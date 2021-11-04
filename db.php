@@ -8,9 +8,9 @@ $password = "";
 $db = new PDO("mysql:host=$dbhost; dbname=$dbname", $username, $password);
 
 //получение всех книжек
-function get_records_all_studybooks(){
+function get_records_all($id){
     global $db;
-    $reconrds = $db->query("SELECT * FROM books WHERE id_category=1");
+    $reconrds = $db->query("SELECT * FROM books WHERE id_category=$id");
     return $reconrds;
 }
 
