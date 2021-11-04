@@ -16,16 +16,16 @@ h2 {
 }
 
 header {
-  padding: 40px 0;
+  padding: 4vh 0;
   position: absolute;
   width: 100%;
   left: 0;
   right: 0;
   z-index: 99;
-  margin-bottom: 40px;
   background-color: #f8963b;
   font-size: 14px;
   display: block;
+  position: fixed;
 }
 
 .container {
@@ -34,6 +34,8 @@ header {
   text-align: center;
 
 }
+
+
 
 .logo {
   margin-left: 15%;
@@ -206,9 +208,8 @@ header {
 
 
 .table-main {
-  margin-top: 200px;
+  margin-top: 13.5vh;
   margin-left: 15%;
-  ;
 }
 
 .card {

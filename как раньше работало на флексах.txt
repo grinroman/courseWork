@@ -1,0 +1,34 @@
+    <section class="main__books">
+        <div class="flex_for_cards">
+
+    <?php
+        $singles = get_records_all(1);
+        
+        foreach ($singles as $single): ?>
+
+            <div class="cart__wrapper">
+                <img src="<?php echo $single["img"] ?>" alt="#" width="100px" class="card-img">
+                <button class="button__wraper">
+                    Купить!
+                </button>
+                <dl class="dl-inline">
+                    <dt class="dt-dotted">
+                        <span>Название</span>
+                    </dt>
+                    <dd><?php echo $single["title"] ?></dd> 
+                    <dt class="dt-dotted">
+                        <span>Автор</span>
+                    </dt>
+                    <dd><?php echo $single["author"] ?></dd> 
+                    
+                    <dt class="dt-dotted">
+                        <span>Цена</span>
+                    </dt>
+                    <dd><?php echo $single["price"] ?> ₽</dd> 
+                </dl>
+        </div>
+
+            <?php endforeach; ?>
+
+            </div>
+    </section>
