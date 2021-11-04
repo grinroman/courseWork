@@ -14,6 +14,7 @@ function get_records_all($id){
     return $reconrds;
 }
 
+
 //получение статьи по айди
 function get_record_by_id($id){
     global $db;

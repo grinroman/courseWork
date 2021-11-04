@@ -101,14 +101,15 @@ header {
 .menu-list {
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
+  justify-content: space-around;
   min-width: inherit;
   min-height: 100%;
   position: absolute;
   margin-left: 20%;
 
 }
-.menu-list-item{
+
+.menu-list-item {
   text-align: center;
 }
 
@@ -255,10 +256,11 @@ dt {
   display: flex;
   /* margin: 0 auto; */
   justify-content: center;
-  
+
 
 }
-.flex_for_cards{
+
+.flex_for_cards {
   display: flex;
   /* width: 80%; */
   border-radius: 6px;
@@ -301,6 +303,63 @@ dt {
   color: #000;
 }
 
-.book__description{
-  margin:0 1.5vw;
+.book__description {
+  margin: 0 1.5vw;
 }
+
+.bookinfo__wrap {
+  box-sizing: border-box;
+  width: 80%;
+  height: 80vh;
+  margin: 7vw 15%;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.picture__wrap, .info__wrap  {
+  position: relative;
+  padding: 5vw 5vh;
+  min-width: 30%;
+  min-height: 50vh;
+  background-color: #faefe4;
+  align-items: center;
+  
+
+}
+.picture__wrap{
+  display: flex;
+  justify-content:center;
+}
+
+
+.picture__wrap img {
+  min-width: 70%;
+}
+
+
+h5{
+  text-align: center;
+  font-size: 5vh;
+  margin-bottom: 5vh;
+}
+
+.info__characteristic__wrap {
+  min-width: 80%  ;
+  margin-left: 15%;
+}
+
+.text__product{
+  margin-top:10vh;
+}
+
+
+.info__text__wrap span::after {  
+  content:'.................................';
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+

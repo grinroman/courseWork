@@ -20,35 +20,35 @@
 <section class="main">
         <table width="80%" cellpadding="5" class="table-main">
             <?php
-            $singles = get_records_all(1);
+            $records = get_records_all(1);
             $i = 1 ;
-            foreach ($singles as $single){
+            foreach ($records as $record){
                 if($i % 3 == 1 )
                 echo "<tr>";?>
                 
                 <td class="card">
-                        <img src="<?php echo $single["img"] ?>" alt="#" width="150px" class="card-img">
-                        <button class="button__wraper">
-                        Купить!
-                        </button>
+                        <img src="<?php echo $record["img"] ?>" alt="#" width="150px" class="card-img">
+                        <a href="bookinfo.php?id=<?php echo $record["id"] ?>">
+                            <button class="button__wraper"> Купить!</button>
+                        </a> 
                         <div class="book__description">
                             <dl class="dl-inline">
                                 <dt class="dt-dotted">
                                     <span>Название</span>
                                 </dt>
-                                <dd><?php echo $single["title"] ?></dd>
+                                <dd><?php echo $record["title"] ?></dd>
                             </dl>
                             <dl class="dl-inline">
                                 <dt class="dt-dotted">
                                     <span>Автор</span>
                                 </dt>
-                                <dd><?php echo $single["author"] ?></dd>
+                                <dd><?php echo $record["author"] ?></dd>
                             </dl>
                             <dl class="dl-inline">
                                 <dt class="dt-dotted">
                                     <span>Цена</span>
                                 </dt>
-                                <dd><?php echo $single["price"] ?> ₽</dd>
+                                <dd><?php echo $record["price"] ?> ₽</dd>
                             </dl>
                         </div>
                 </td>
