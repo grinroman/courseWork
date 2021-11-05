@@ -21,9 +21,9 @@
             <div class="info__wrap">
               <h5>Информация о товаре</h5>
                 <div class="info__characteristic__wrap">
-                   <span>Название</span><?php echo $record["title"] ?> <br>
-                   <span>Автор</span> <?php echo $record["author"] ?> <br>
-                   <span>Цена</span> <?php echo $record["price"] ?> ₽ <br>
+                   <p> <span>Название</span><span><?php echo $record["title"] ?> </span></p><br>
+                   <p> <span>Автор</span> <span><?php echo $record["author"] ?> </span> </p><br>
+                   <p> <span>Цена</span> <span><?php echo $record["price"] ?> ₽ </span> </p><br>    
                 </div>
                 <div class="text__product">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, maiores ipsam suscipit alias voluptatibus eius voluptatem ducimus quas ea provident minima incidunt, cupiditate vero possimus rem. Voluptate doloremque doloribus dolore.

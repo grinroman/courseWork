@@ -323,7 +323,7 @@ dt {
   padding: 5vw 5vh;
   min-width: 30%;
   min-height: 50vh;
-  background-color: #faefe4;
+  background-color: #fdf9f4;
   align-items: center;
   
 
@@ -347,19 +347,29 @@ h5{
 
 .info__characteristic__wrap {
   min-width: 80%  ;
-  margin-left: 15%;
+  /* margin-right: 10vw; */
+  text-align: center ;
 }
 
 .text__product{
-  margin-top:10vh;
+  margin-top:5vh;
 }
 
-
-.info__text__wrap span::after {  
-  content:'.................................';
+.info__characteristic__wrap p:after {  content:'...................................................................................................................................................................';
   display: block;
   white-space: nowrap;
   overflow: hidden;
 }
+.info__characteristic__wrap p span:first-of-type {
+  float:left;
+  margin-right: 10px;
+}
+.info__characteristic__wrap p span:last-of-type {
+  float:right;
+  margin-left: 10px;
+}
+
+
+
 
 
