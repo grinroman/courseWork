@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-    include("headerPlusNav.php");
+    include("../headerPlusNav.php");
         $record = get_record_by_id($_GET["id"])
     ?>
    

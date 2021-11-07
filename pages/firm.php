@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/main.css">
     <title>Document</title>
 
 </head>
 
 <body>
 <?php
-    include("headerPlusNav.php");
+    include("../headerPlusNav.php");
     ?>
     <section class="main">
         <div class="about-firm-text">
@@ -43,8 +43,7 @@
     </section>
 
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 
 
 

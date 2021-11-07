@@ -33,6 +33,10 @@ function get_categoty_by_id($id){
     }
 }
 
+// function get_admin_access(){
+
+// }
+
 
 ?>
 

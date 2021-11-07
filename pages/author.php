@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/main.css">
     <title>Document</title>
 
 </head>
@@ -13,7 +13,7 @@
 <body>
     
 <?php
-    include("headerPlusNav.php");
+    include("../headerPlusNav.php");
     ?>
 
     <section class="main">
@@ -27,11 +27,11 @@
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae non voluptates veniam reiciendis id accusamus alias minus ab illo, sit harum tempore soluta asperiores doloribus quasi. Consectetur quasi sunt consequatur!
             </p>
         </div>
-        <img src="img/monke.jpg" alt="" class="picture-main">
+        <img src="../img/monke.jpg" alt="" class="picture-main">
     </section>
 
     </div>
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 
 
 

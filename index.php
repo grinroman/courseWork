@@ -9,11 +9,35 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-    include("headerPlusNav.php");
-    ?>
+<header class="header">
+        <div class="container d-flex justify-content-center align-items-center">
+            <a href="index.php" class="logo">
+                <img src="img/logo.png" alt="logo">
+            </a>
+            <nav class="main-header-nav">
+                <a href="pages\fantastic.php">Фантастика</a>
+                <a href="pages\studybooks.php">Учебники </a>
+                <a href="pages\scientific.php">Научная литература</a>
+            </nav>
+        </div>
+        <!-- /.container -->
+    </header>
+    <div class="wrapper">
+        <div class="menu">
+            <a href="#" class="menu-btn"></a>
+            <nav class="menu-list">
+                <div class="menu-list-item"><a href="index.php">Главная</a></div>
+                <div class="menu-list-item"><a href="pages\author.php">Об авторе</a></div>
+                <div class="menu-list-item"><a href="pages\firm.php">О фирме</a></div>
+            </nav>
+        </div>
+    </div>
+</header>
+    
     <section class="main">
+   
         <div class="about-firm-text">
+        <a href="admin_avt.php">Попадание в админку</a>
             <h2>О книгах</h2>
             <p>
                 У разных онлайн-магазинов (не только книжных) есть примерно одинаковый набор фич: товарные рекомендации,
@@ -37,6 +61,5 @@
            </div>
     </footer>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
 </html>
