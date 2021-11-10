@@ -26,7 +26,7 @@
                 echo "<tr>";?>
                 <td class="card">
                         <img src="../<?php echo $record["img"] ?>" alt="#" width="150px" class="card-img">
-                        <a href="../bookinfo.php?id=<?php echo $record["id"] ?>">
+                        <a href="bookinfo.php?id=<?php echo $record["id"] ?>">
                             <button class="button__wraper"> Купить!</button>
                         </a> 
                         <div class="book__description">

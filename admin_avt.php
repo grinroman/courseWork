@@ -1,3 +1,8 @@
+<?php
+//  session_start();
+//  echo $_SESSION['admin'];
+ require'db.php'; 
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,12 +16,11 @@
 <body>
     <section class="main">
         <p>Авторизация:</p>
-        <form action="adminavt.php" method="post">
+        <form action="getaccess.php" method="post">
             <input name="login" placeholder="Логин">
             <input type="password" name="password" placeholder="Пароль">
             <input type="submit" value="Войти">
         </form>
     </section>
 </body>
-    <script src="js/script.js"></script>
 </html>

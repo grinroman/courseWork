@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/main.css">
     <title>Document</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
     <section class="main">
        <div class="bookinfo__wrap">
             <div class="picture__wrap">
-                <img src="<?php echo $record["img"] ?>" alt="#">
+                <img src="../<?php echo $record["img"] ?>" alt="#">
             </div>
             <div class="info__wrap">
               <h5>Информация о товаре</h5>
