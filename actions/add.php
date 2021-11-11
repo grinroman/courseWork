@@ -9,7 +9,7 @@ $book_category = $_POST['book_category'];
 //работа с загрузкой файла
 $img = $_FILES["image"];
 
-?><pre><?php var_dump($img); ?></pre><?php
+
 if(!is_dir("../img")){
     mkdir("../img", 0777, true);//даем самые широкие права + возможность создавать вложенные дирректории 
 }

@@ -21,7 +21,6 @@
         <div class="admin__table">
             <table>
                 <tr>
-                        <th>iD</th>
                         <th>img</th>
                         <th>price</th>
                         <th>title</th>
@@ -33,7 +32,6 @@
                 <?php $records = get_records_all();
                  foreach ($records as $record){?>
                 <tr>
-                    <td><?= $record["id"] ?></td>
                     <td inf-text> <img src="../<?php echo $record["img"] ?>" alt="#" width="100px" class="card-img"></td>
                     <td inf-text><?= $record["price"] ?></td>
                     <td inf-text><?= $record["title"] ?></td>
@@ -43,7 +41,11 @@
                         <button class="update__modal__open">Изменение товара</button>
                     </td>
                     <td>
-                        <button class="delete__prodcut">Удаление товара</button>
+                        <form action="actions\delete.php" method="POST">
+                            <input type="hidden" name="delete_id" value="<?= $record["id"] ?>">
+                            <input type="hidden" name="delete_img_path" value="../<?php echo $record["img"] ?>">
+                            <button type="submit" name="delete_record_btn" class="delete__prodcut__btn" >Удалить товар</button>
+                        </form>
                     </td>
                 </tr>
                 <?php } ?>
@@ -56,7 +58,7 @@
                 <p>Наименование книги</p>
                 <input type="text" name="title">
                 <p>Автор книги</p>
-                <input type="author" name="title"><br>
+                <input type="text" name="author"><br>
                 <select name="book_category" id="book__category" size = '1'>
                     <?php $records = get_all_categories();
                     foreach ($records as $record){?>
@@ -71,7 +73,7 @@
     <div class="modal">
         <div class="modal__dialog">
             <div class="modal__content">
-                <form action="actions\update.php" method = "post">
+                <form action="actions\update.php" method = "post" enctype = "multipart/form-data">
                     <div data-close class="modal__close">&times;</div>
                     <div class="modal__title">Изменение товара</div>
                     <p>Адрес картинки</p>
@@ -88,6 +90,8 @@
                         <option value="<?= $record["id"] ?>"><?= $record["category"] ?></option>
                     <?php } ?>
                 </select><br>
+                <input type="file" name="image"> <br>
+                <button type="submit" name="change_record_btn" class="change__prodcut__btn" >Изменить товар товар</button>
                 </form>
             </div>
             <div class="modal__picture__wrapper">

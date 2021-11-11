@@ -407,15 +407,15 @@ h5{
   background-color: rgb(168, 168, 3);
 }
 
-.delete__prodcut{
+.delete__prodcut__btn{
   background-color: rgb(250, 6, 6);
   min-width: 100%;
-  height: inherit;
+  height: 4vh;
   box-sizing:border-box;
   border:none
 }
 
-.delete__prodcut:hover{
+.delete__prodcut__btn:hover{
   background-color: rgb(124, 11, 11);
 }
 
@@ -432,7 +432,7 @@ h5{
 }
 
 .modal__dialog {
-  max-width: 40vw;
+  max-width: 50vw;
   margin: 20vh auto;
 }
 
@@ -515,3 +515,20 @@ width: 16vw;
   margin: 20px;
 }
 
+
+.change__prodcut__btn{
+  background-color: rgb(246, 250, 6);
+  min-width: 100%;
+  height: 4vh;
+  box-sizing:border-box;
+  border:none
+}
+
+.change__prodcut__btn:hover{
+  background-color: rgb(122, 118, 62);
+}
+
+.modal__content input{
+  width: 100%;
+  margin: 1%;
+}
