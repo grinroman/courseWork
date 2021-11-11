@@ -49,10 +49,8 @@
                 <?php } ?>
             </table>
         </div>
-        <div class="functional__wrapper">
-            <form action="actions\add.php" method = "post">
-                <p>Адрес картинки</p>
-                <input type="text" name="img_adress">
+        <div class="add__from_wrapper">
+            <form action="actions\add.php" method = "post" enctype = "multipart/form-data">
                 <p>Цена товара</p>
                 <input type="number" name="price">
                 <p>Наименование книги</p>
@@ -65,6 +63,7 @@
                         <option value="<?= $record["id"] ?>"><?= $record["category"] ?></option>
                     <?php } ?>
                 </select><br>
+                <input type="file" name="image"> <br>
                 <button type="submit">Добавить новый товар</button>
             </form>
         </div>
@@ -72,7 +71,7 @@
     <div class="modal">
         <div class="modal__dialog">
             <div class="modal__content">
-                <form action="#">
+                <form action="actions\update.php" method = "post">
                     <div data-close class="modal__close">&times;</div>
                     <div class="modal__title">Изменение товара</div>
                     <p>Адрес картинки</p>
@@ -82,7 +81,7 @@
                     <p>Наименование книги</p>
                     <input type="text" name="title" class=".modal__input">
                     <p>Автор книги</p>
-                    <input type="author" name="title" class=".modal__input"><br>
+                    <input type="text" name="author" class=".modal__input"><br>
                     <select name="book_category" id="book__category" size = '1'>
                     <?php $records = get_all_categories();
                     foreach ($records as $record){?>
