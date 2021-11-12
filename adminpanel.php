@@ -21,6 +21,7 @@
         <div class="admin__table">
             <table>
                 <tr>
+                        <th>ID</th>
                         <th>img</th>
                         <th>price</th>
                         <th>title</th>
@@ -32,6 +33,7 @@
                 <?php $records = get_records_all();
                  foreach ($records as $record){?>
                 <tr>
+                    <td inf-text><?= $record["id"] ?></td>
                     <td inf-text> <img src="../<?php echo $record["img"] ?>" alt="#" width="100px" class="card-img"></td>
                     <td inf-text><?= $record["price"] ?></td>
                     <td inf-text><?= $record["title"] ?></td>
@@ -76,6 +78,7 @@
                 <form action="actions\update.php" method = "post" enctype = "multipart/form-data">
                     <div data-close class="modal__close">&times;</div>
                     <div class="modal__title">Изменение товара</div>
+                    <input type="hidden" name="id" class=".modal__input">
                     <p>Адрес картинки</p>
                     <input type="text" name="img_adress" class=".modal__input">
                     <p>Цена товара</p>

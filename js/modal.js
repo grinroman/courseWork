@@ -19,7 +19,7 @@ function openModal(modalSelector, currentBtn) {
         const infoFromTable = currentBtn.parentElement.parentElement.querySelectorAll('[inf-text]'); //получаем информацию из строки нажатой кнопки
         infoFromTable.forEach((textField, i) => { // выгрузим текстовые поля в форму изменения, отобразим текущую картинку
             if (textField.firstElementChild) {
-                textFieldsInModal[i].value = textField.firstElementChild.src.slice(7);
+                textFieldsInModal[i].value = textField.firstElementChild.src.slice(18);
                 pictureWrapper.innerHTML = `<img src="${textField.firstElementChild.src}" alt="#" width="100px" class="card-img"> `;
                 pictureWrapper.style.width = "400px";
                
