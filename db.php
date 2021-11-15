@@ -63,7 +63,16 @@ function get_admin_login($login, $password){
     return $check->fetchColumn();
 }
 
+//выгружаем информацию о страницах из бд в текст ареа
+function get_pages_code($id){
+    global $db;
+    $pages = $db->prepare("SELECT * FROM mainpages WHERE id = $id");
+    $pages->execute();
 
+    foreach ($pages as $page ){
+        return $page["page_text"];
+    }
+}
 
 ?>
 

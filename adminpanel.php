@@ -18,18 +18,20 @@
 </head>
 <body>
     <section class="admin__wrapper">
+        <div class="sort__form">
+            <!-- <form action="actions\sort.php" method="POST">
+                <button type="submit" name="sort_product_btn" class="change__prodcut__btn" >Изменить товар</button>
+                <select name="book_category" id="book__category" size = '1'>
+                    <?php $records = get_all_categories();
+                    foreach ($records as $record){?>
+                        <option value="<?= $record["id"] ?>"><?= $record["category"] ?></option>
+                    <?php } ?>
+                </select>
+            </form> -->
+        </div>
         <div class="admin__table">
             <table>
-                <tr>
-                        <th>ID</th>
-                        <th>img</th>
-                        <th>price</th>
-                        <th>title</th>
-                        <th>author</th>
-                        <th>id_category</th>
-                        <th>Изменить товар</th>
-                        <th>Удалить товар</th>
-                </tr>
+               
                 <?php $records = get_records_all();
                  foreach ($records as $record){?>
                 <tr>
@@ -55,22 +57,60 @@
         </div>
         <div class="add__from_wrapper">
             <form action="actions\add.php" method = "post" enctype = "multipart/form-data">
-                <p>Цена товара</p>
-                <input type="number" name="price">
-                <p>Наименование книги</p>
-                <input type="text" name="title">
-                <p>Автор книги</p>
-                <input type="text" name="author"><br>
-                <select name="book_category" id="book__category" size = '1'>
-                    <?php $records = get_all_categories();
-                    foreach ($records as $record){?>
-                        <option value="<?= $record["id"] ?>"><?= $record["category"] ?></option>
-                    <?php } ?>
-                </select><br>
-                <input type="file" name="image"> <br>
-                <button type="submit">Добавить новый товар</button>
+                <div>
+                    <p>Цена товара</p> 
+                    <input type="number" name="price">
+                </div>  
+                <div>
+                    <p>Наименование книги</p>
+                    <input type="text" name="title">
+                </div>  
+                <div>
+                    <p>Автор книги</p>
+                    <input type="text" name="author"><br>
+                <div> 
+                <div class="special-add-fields">
+                    <select name="book_category" id="book__category" size = '1'>
+                        <?php $records = get_all_categories();
+                        foreach ($records as $record){?>
+                            <option value="<?= $record["id"] ?>"><?= $record["category"] ?></option>
+                        <?php } ?>
+                    </select>
+                    <input type="file" name="image" id = "addfile"> 
+                </div>   
+                <div>
+                    <button type="submit" >Добавить новый товар</button>
+                </div>
+              
             </form>
+            <div class="update__pages__wrapper">
+                <h3>Изменение главной страницы</h3>
+               <form class="index__update__form" action="actions\changeindex.php" method='post'>
+                   <textarea name="indexForm" id="index-from" cols="74" rows="40">
+                        <?= get_pages_code(1) ?> 
+                   </textarea>
+                   <input type="hidden" name="change_id" value="1">
+                   <button type="submit" name="change_page_btn" class="change__page__btn" >Изменить страницу</button>
+               </form> 
+               <h3>Изменение страницы "О фирме"</h3>
+               <form class="firm__update__form" action="actions\changefirm.php" method='post'>
+                   <textarea name="firmForm" id="firm-from" cols="74" rows="40">
+                        <?= get_pages_code(5) ?> 
+                   </textarea>
+                   <input type="hidden" name="change_id" value="5">
+                   <button type="submit" name="change_page_btn" class="change__page__btn" >Изменить страницу</button>
+               </form>
+               <h3>Изменение страницы "Об авторе"</h3>         
+               <form class="author__update__form" action="actions\changeauthor.php" method='post'>
+                   <textarea name="authorForm" id="author-from" cols="74" rows="40">
+                        <?= get_pages_code(3) ?> 
+                   </textarea>
+                   <input type="hidden" name="change_id" value="5">
+                   <button type="submit" name="change_page_btn" class="change__page__btn" >Изменить страницу</button>
+               </form>                 
+            </div>
         </div>
+       
     </section>
     <div class="modal">
         <div class="modal__dialog">

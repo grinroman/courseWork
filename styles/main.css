@@ -371,12 +371,14 @@ h5{
 
 .admin__table table{
   border-collapse: collapse;
+  margin: 1% 1%;
 }
 
 .admin__table th, td{
-  padding: 0.5vw 0.5vw;
- border: solid 1px #FFF;
+  padding: 0.1vw 0.2vw;
+ border: solid 1px rgb(255, 190, 116);
   box-sizing: border-box;
+  text-align: center;
  
 }
 
@@ -386,7 +388,7 @@ h5{
 }
 
 .admin__table td{
-  background-color:#ffa958;
+  background-color:#f7d0ab;
   text-align: center;
   vertical-align: middle;
 }
@@ -531,4 +533,73 @@ width: 16vw;
 .modal__content input{
   width: 100%;
   margin: 1%;
+}
+
+.add__from_wrapper{
+  display: block;
+  margin: 1% 1%;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: #f5a75f;
+  min-width: 40vw;
+}
+
+.add__from_wrapper form{
+  margin: 2% 2%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+
+
+.update__pages__wrapper{
+  margin: 2% 2%;
+  padding: 2% 2%;
+  border-radius: 7px;
+  background-color: #f8963b;
+
+}
+
+.add__from_wrapper input{
+  top:0;
+  left:0;
+  width: 60%;
+  border-radius:7px;
+  float: right;
+}
+
+.add__from_wrapper p{
+  display: inline-block;
+  margin: 2% 2%;
+}
+
+.add__from_wrapper div input{
+  display: block;
+  float: right;
+}
+
+.add__from_wrapper [type="submit"]{
+  width: 80%;
+  margin: 2% 10% ;
+}
+
+
+#book__category{
+  top:0;
+  left:0;
+  width: 40%;
+  display: inline-block;
+  border-radius:10px;
+  height: 20px;
+  text-align: center;
+  /* padding-right: 1vw; */
+
+}
+
+#addfile{
+  width: inherit;
+  border-radius: 0px;
 }
