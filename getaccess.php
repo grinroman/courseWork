@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login']) && $_POST['pas
 
     header("Location: $script");
 } else {
-    echo "Error! one of the values was not declared!"
+    echo "Error! one of the values was not declared!";
 }
 
 ?>
