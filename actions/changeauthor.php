@@ -3,7 +3,7 @@ require'../db.php';
 session_start();
 
     $id = $_POST['change_id'];
-    $page_text = $_POST['autorForm'];
+    $page_text = $_POST['authorForm'];
 
     ?><pre><?php var_dump($id); ?></pre><?php
 

@@ -20,9 +20,9 @@ function get_records_all($id = null){
 
     global $db;
     if($id !== null){
-        $records = $db->query("SELECT * FROM books WHERE id_category=$id");
+        $records = $db->query("SELECT * FROM books WHERE id_category=$id ORDER BY id DESC");
     } else {
-        $records = $db->query("SELECT * FROM books");
+        $records = $db->query("SELECT * FROM books ORDER BY id DESC");
     }
     
     return $records;

@@ -2,7 +2,7 @@
 
 require'db.php'; 
 
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login']) && $_POST['password']) {
 
     $login = $_POST['login'];
     $pas = $_POST['password'];
@@ -17,6 +17,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $script = 'admin_avt.php';
 
     header("Location: $script");
+} else {
+    echo "Error! one of the values was not declared!"
 }
 
 ?>
